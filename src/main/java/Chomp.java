@@ -15,6 +15,11 @@ public class Chomp
     public static boolean eat(char[][] board, int row, int col)
     {        
         // YOUR CODE HERE
+        if (row < board.length && col < board[0].length){
+            if (board[row][col] == '*'){
+                return true;
+            }
+        }
         return false;
     }
     

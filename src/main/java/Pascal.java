@@ -8,6 +8,14 @@ public class Pascal
 {
     public static int[][] pascalTriangle(int n) {
         // YOUR CODE HERE
-        return null;
+        int[][] tri = new int[n][n];
+        tri[0][0] = 1;
+        for (int y = 1; y < n; y++){
+            tri[y][0] = 1;
+            for (int x = 1; x < n; x++){
+                tri[y][x] = tri[y - 1][x - 1] + tri[y - 1][x];
+            }
+        }
+        return tri;
     }
 }
